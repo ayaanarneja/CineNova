@@ -1,0 +1,39 @@
+{
+  "name": "movie-ticket-booking",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "seed": "node scripts/seed-showtimes.mjs",
+    "preserver": "npm run seed",
+    "server": "json-server --watch db.json --port 4000",
+    "predev:full": "npm run seed",
+    "dev:full": "concurrently \"npm run server\" \"npm run dev\""
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.9.0",
+    "axios": "^1.7.2",
+    "gsap": "^3.12.5",
+    "jsbarcode": "^3.11.6",
+    "jspdf": "^2.5.1",
+    "jspdf-html2canvas": "^1.4.0",
+    "html2canvas": "^1.4.1",
+    "lottie-web": "^5.12.2",
+    "pinia": "^2.1.7",
+    "qrcode": "^1.5.3",
+    "vue": "^3.4.29",
+    "vue-router": "^4.3.3",
+    "vuetify": "^3.6.11",
+    "@mdi/font": "^7.4.47"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "concurrently": "^8.2.2",
+    "json-server": "^0.17.4",
+    "sass": "^1.77.6",
+    "vite": "^5.3.1"
+  }
+}
